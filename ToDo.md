@@ -2,44 +2,44 @@
 
 ## Framing, Wiring, & Plumbing
 
-- [ ] Run `npm init` from the terminal
-- [ ] Run `npm install express` from the terminal
-- [ ] Run `npm install pg` from the terminal
-- [ ] Create `.gitignore` file
-  - [ ] `node_modules/` needs to be present
-  - [ ] `.DS_Store` needs to be present
-- [ ] Update `package.json` file with `start` command
-  - [ ] Find the `"scripts"` section
-  - [ ] Add the following: `"start": "node ./server/server.js"`
-- [ ] Create `server` directory
-- [ ] Create `server.js` inside of the `server` directory
-  - [ ] `const express = require('express')`
-  - [ ] `const app = express()`
-  - [ ] `const port = 5000`
-  - [ ] `app.use(express.static('server/public'))`
-  - [] `app.use(express.json())`
-  - [ ] `app.use (express.urlencoded({extended: true}))`
-  - [ ] `app.listen(port, function() { console.log("I'm listening....", port); })`
-- [ ] Create `public` directory inside of the `server` directory
-- [ ] Create `index.html` inside of the `public` directory
-- [ ] Create `styles` directory inside of the `public` directory
-- [ ] Create `style.css` inside of the `styles` directory
-  - [ ] `<link>` file to `index.html`
-- [ ] Create `scripts` directory inside of the `public` directory
-- [ ] Create `client.js` inside of the `scripts` directory
-  - [ ] `<script src>` file to `index.html`
-- [ ] Create `vendors` directory inside of the `public` director
-  - Create `jQuery.js` inside of the `vendors` directory
-  - `<script src>` file to `index.html` before `client.js`
-- [ ] Create `modules` directory inside of the `server` directory
-  - [ ] Create `pool.js` inside of the `modules` director
-    - [ ] `const pg = require('pg')`
-    - [ ] `const config = { database: 'databasename', host: 'localhost' port: 5432, };`
-    - [ ] `const pool = new pg.Pool(config);`
-    - [ ] `pool.on("connect", () => {console.log('connected to postgres');});`
-    - [ ] `pool.on("error", (error) => {console.log('ERROR: Connecting to postgres', error);});`
-    - [ ] `module.exports = pool;`
-  - [ ] `const pool = require('filepath to pool.js')` where needed
+- [x] Run `npm init` from the terminal
+- [x] Run `npm install express` from the terminal
+- [x] Run `npm install pg` from the terminal
+- [x] Create `.gitignore` file
+  - [x] `node_modules/` needs to be present
+  - [x] `.DS_Store` needs to be present
+- [x] Update `package.json` file with `start` command
+  - [x] Find the `"scripts"` section
+  - [x] Add the following: `"start": "node ./server/server.js"`
+- [x] Create `server` directory
+- [x] Create `server.js` inside of the `server` directory
+  - [x] `const express = require('express')`
+  - [x] `const app = express()`
+  - [x] `const port = 5000`
+  - [x] `app.use(express.static('server/public'))`
+  - [x] `app.use(express.json())`
+  - [x] `app.use (express.urlencoded({extended: true}))`
+  - [x] `app.listen(port, function() { console.log("I'm listening....", port); })`
+- [x] Create `public` directory inside of the `server` directory
+- [x] Create `index.html` inside of the `public` directory
+- [x] Create `styles` directory inside of the `public` directory
+- [x] Create `style.css` inside of the `styles` directory
+  - [x] `<link>` file to `index.html`
+- [x] Create `scripts` directory inside of the `public` directory
+- [x] Create `client.js` inside of the `scripts` directory
+  - [x] `<script src>` file to `index.html`
+- [x] Create `vendors` directory inside of the `public` director
+- [x] Create `jQuery.js` inside of the `vendors` directory
+  - [x] `<script src>` file to `index.html` before `client.js`
+- [x] Create `modules` directory inside of the `server` directory
+- [x] Create `pool.js` inside of the `modules` director
+  - [x] `const pg = require('pg')`
+  - [x] `const config = { database: 'databasename', host: 'localhost' port: 5432, };`
+  - [x] `const pool = new pg.Pool(config);`
+  - [x] `pool.on("connect", () => {console.log('connected to postgres');});`
+  - [x] `pool.on("error", (error) => {console.log('ERROR: Connecting to postgres', error);});`
+  - [x] `module.exports = pool;`
+- [ ] `const pool = require('filepath to pool.js')` where needed
 - [ ] Create `routes` directory inside of the `server` directory
 
 ## Base Mode
