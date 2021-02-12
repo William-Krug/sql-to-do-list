@@ -48,11 +48,29 @@
   - [x] database.sql file
     - [x] include all scripts
 - [ ] static html setup
-  - [ ] create a Task on the front end (form)
+  - [x] create a Task on the front end (form)
   - [ ] sections for "todo" "inprogress" "complete"
-  - [ ] refresh to show all tasks that need to be completed (GET)
+- [ ] add task button listener
+- [ ] add task button handler
+- [ ] task.router.js
+  - [ ] GET all tasks
+  - [ ] PUT new task
+  - [ ] UPDATE task to in progress
+  - [ ] UPDATE task to complete
+  - [ ] DELETE task
+- [ ] AJAX
+  - [ ] GET all tasks
+  - [ ] POST new task all tasks
+  - [ ] UPDATE task to in progress
+  - [ ] UPDATE task to complete
+  - [ ] DELETE task
+- [ ] refresh to show all tasks that need to be completed (GET)
 - [ ] store newly created Task in db (POST)
 - [ ] Complete & Delete option per task
+  - [ ] complete button listener
+  - [ ] complete button handler
+  - [ ] delete button listener
+  - [ ] delete button handler
 - [ ] visually change task on front end when completed (UPDATE)
 - [ ] deleting a task should remove it from the db and front end (DELETE)
 - [ ] CSS
