@@ -44,10 +44,12 @@
 
 ## Base Mode
 
-- [ ] create DB `weekend-to-do-app`
-  - [ ] database.sql file
-    - [ ] include all scripts
-- [ ] create a Task on the front end
+- [x] create DB `weekend-to-do-app`
+  - [x] database.sql file
+    - [x] include all scripts
+- [ ] static html setup
+  - [ ] create a Task on the front end (form)
+  - [ ] sections for "todo" "inprogress" "complete"
   - [ ] refresh to show all tasks that need to be completed (GET)
 - [ ] store newly created Task in db (POST)
 - [ ] Complete & Delete option per task
