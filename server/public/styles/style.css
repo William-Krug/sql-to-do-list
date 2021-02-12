@@ -1,12 +1,12 @@
 header {
-  /* background-color:; */
+  background-color: #ff88ff9e;
   margin: 0;
   text-align: center;
   padding: 1rem;
 }
 
 main {
-  /* background-color:; */
+  background-color: #ffff887e;
   margin: 0;
 }
 
@@ -23,10 +23,28 @@ main {
 .status {
   display: inline-block;
   text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
 .task {
   display: inline-block;
+  width: 15rem;
+  height: 15rem;
   margin: 0.5rem;
   padding: 1rem;
+}
+
+.td-task {
+  background-color: #ececec;
+}
+
+.ip-task {
+  background-color: #9bedff;
+}
+
+.c-task {
+  background-color: #b7ffbf;
 }

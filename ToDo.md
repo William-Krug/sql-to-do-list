@@ -52,11 +52,11 @@
   - [x] sections for "todo" "inprogress" "complete"
 - [x] add task button listener
 - [x] add task button handler
-- [ ] task.router.js
+- [x] task.router.js
   - [x] GET all tasks
   - [x] PUT new task
-  - [ ] UPDATE task to in progress
-  - [ ] UPDATE task to complete
+  - [x] UPDATE task to in progress
+  - [x] UPDATE task to complete
   - [x] DELETE task
 - [ ] AJAX
   - [ ] GET all tasks

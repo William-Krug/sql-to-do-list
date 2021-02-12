@@ -1,7 +1,9 @@
 const express = require('express');
 
-const app = express();
 const port = 5000;
+
+// Set up app
+const app = express();
 
 app.use(express.static('server/public'));
 app.use(express.json());
