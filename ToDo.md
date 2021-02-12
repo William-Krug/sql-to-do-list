@@ -50,8 +50,8 @@
 - [x] static html setup
   - [x] create a Task on the front end (form)
   - [x] sections for "todo" "inprogress" "complete"
-- [ ] add task button listener
-- [ ] add task button handler
+- [x] add task button listener
+- [x] add task button handler
 - [ ] task.router.js
   - [ ] GET all tasks
   - [ ] PUT new task
