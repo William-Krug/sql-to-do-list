@@ -10,7 +10,10 @@ const pool = require('../modules/pool');
 router.get('/', (req, res) => {
   console.log('*** in GET /todoList ***');
 
-  const sqlScript = 'SELECT * FROM "tasks" ORDER BY "id" ASC;';
+  const sqlScript = `
+    SELECT * FROM "tasks"
+    ORDER BY "id" ASC;
+    `;
   console.log('sqlScript:', sqlScript);
 
   pool
@@ -27,8 +30,43 @@ router.get('/', (req, res) => {
     });
 });
 
+/**
+ * POST endpoint for /todoList
+ *
+ * Request body looks like:
+ * {
+ *  name: 'Groceries',
+ *  notes: 'Milk, Eggs, Bread'
+ * }
+ */
 router.post('/', (req, res) => {
-  pool.query().then().catch();
+  console.log('*** in POST /todoList ***');
+
+  const sqlScript = `
+    INSERT INTO "tasks"
+      ("name", "notes")
+    VALUES
+      ($1, $2)
+    `;
+  console.log('sqlScript:', sqlScript);
+  const queryArguments = [
+    req.body.name, // $1
+    req.body.notes, // $2
+  ];
+  console.log('queryArguments:', queryArguments);
+
+  pool
+    .query(sqlScript, queryArguments)
+    .then((dbResponse) => {
+      res.sendStatus(201);
+    })
+    .catch((error) => {
+      console.log(
+        `*** ERROR making database POST query ${sqlScript} ***`,
+        error
+      );
+      res.sendStatus(500);
+    });
 });
 
 router.put('/tasks/inProgress/:id', (req, res) => {
@@ -50,7 +88,9 @@ router.delete('/tasks/:id', (req, res) => {
   let deleteID = req.params.id;
   console.log('deleteID:', deleteID);
 
-  const sqlScript = 'DELETE FROM "tasks" WHERE "id" = $1;';
+  const sqlScript = `
+    DELETE FROM "tasks"
+    WHERE "id" = $1;`;
   console.log('sqlCript:', sqlScript);
 
   pool
