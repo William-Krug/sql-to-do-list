@@ -39,7 +39,7 @@
   - [x] `pool.on("connect", () => {console.log('connected to postgres');});`
   - [x] `pool.on("error", (error) => {console.log('ERROR: Connecting to postgres', error);});`
   - [x] `module.exports = pool;`
-- [ ] `const pool = require('filepath to pool.js')` where needed
+- [x] `const pool = require('filepath to pool.js')` where needed
 - [x] Create `routes` directory inside of the `server` directory
 
 ## Base Mode
@@ -67,9 +67,9 @@
 - [ ] refresh to show all tasks that need to be completed (GET)
 - [ ] store newly created Task in db (POST)
 - [ ] Complete & Delete option per task
-  - [ ] complete button listener
+  - [x] complete button listener
   - [ ] complete button handler
-  - [ ] delete button listener
+  - [x] delete button listener
   - [ ] delete button handler
 - [ ] visually change task on front end when completed (UPDATE)
 - [ ] deleting a task should remove it from the db and front end (DELETE)

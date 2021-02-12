@@ -18,6 +18,32 @@ router.put('/tasks/completed/:id', (req, res) => {
   pool.query().then().catch();
 });
 
+/**
+ * DELETE endpoint
+ * /todoList/tasks/3
+ */
 router.delete('/tasks/:id', (req, res) => {
-  pool.query().then().catch();
+  console.log('(*** in DELETE /tasks/:id ***');
+
+  let deleteID = req.params.id;
+  console.log('deleteID:', deleteID);
+
+  const sqlScript = 'DELETE FROM "tasks" WHERE "id" = $1;';
+  console.log('sqlCript:', sqlScript);
+
+  pool
+    .query(sqlScript, [deleteID])
+    .then((dbResponse) => {
+      console.log('Task Deleted');
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(
+        `*** ERROR making database DELETE query ${sqlScript} ***`,
+        error
+      );
+      res.sendStatus(500);
+    });
 });
+
+module.exports = router;
