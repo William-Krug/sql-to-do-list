@@ -47,9 +47,9 @@
 - [x] create DB `weekend-to-do-app`
   - [x] database.sql file
     - [x] include all scripts
-- [ ] static html setup
+- [x] static html setup
   - [x] create a Task on the front end (form)
-  - [ ] sections for "todo" "inprogress" "complete"
+  - [x] sections for "todo" "inprogress" "complete"
 - [ ] add task button listener
 - [ ] add task button handler
 - [ ] task.router.js
@@ -78,6 +78,7 @@
   - [ ] font family and siz
   - [ ] text color
   - [ ] background color of each task
+- [ ] README creation
 
 ## Stretch Goals
 

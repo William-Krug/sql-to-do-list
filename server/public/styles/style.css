@@ -1,3 +1,32 @@
-h1 {
-  color: #ed2939;
+header {
+  /* background-color:; */
+  margin: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  /* background-color:; */
+  margin: 0;
+}
+
+#addTaskForm {
+  display: inline-block;
+  width: 30%;
+  padding-left: 10%;
+}
+
+#taskStatus {
+  padding: 2rem;
+}
+
+.status {
+  display: inline-block;
+  text-align: center;
+}
+
+.task {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 1rem;
 }
