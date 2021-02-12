@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
   const sqlScript = `
     SELECT * FROM "tasks"
-    ORDER BY "id" ASC;
+    ORDER BY "id";
     `;
   console.log('sqlScript:', sqlScript);
 
