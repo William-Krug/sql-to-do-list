@@ -17,14 +17,20 @@ function onReady() {
   $('.status').on('click', '.deleteButton', removeTask);
 }
 
+/**
+ * GET call to /toDoList
+ *
+ * Function makes a GET AJAX call.
+ * Successful promise renders all tasks to the DOM
+ */
 function getTasks() {
   $.ajax({
     method: 'GET',
     url: '/todoList',
   })
-    .then(function (response) {
-      console.log('GET response:', response);
-      renderTasks(response);
+    .then(function (taskList) {
+      console.log('GET response:', taskList);
+      renderTasks(taskList);
     })
     .catch(function (error) {
       console.log('*** ERROR in task GET', error);
@@ -32,6 +38,15 @@ function getTasks() {
     });
 }
 
+/**
+ * Function takes in the results from an AJAX GET call to the database
+ * and renders each task to the DOM.
+ *
+ * The state of the task determines which section of the DOM to be
+ * displayed in.
+ *
+ * @param {*} taskList
+ */
 function renderTasks(taskList) {
   // Testing and debugging breadcrumbs
   if (verbose) {
@@ -39,15 +54,17 @@ function renderTasks(taskList) {
     console.log('\ttaskList:', taskList);
   }
 
+  // Clear the DOM
   $('#toDoTasks').empty();
   $('#inProgressTasks').empty();
   $('#completedTasks').empty();
 
-  let counter = 1;
+  // Loop through provided taskList and append each task to the DOM
   for (let task of taskList) {
     let $sectionContainer = '';
     let classContainer = '';
 
+    // Determine which section of the DOM current task belongs in
     if (task.toDo) {
       $sectionContainer = $('#toDoTasks');
       classContainer = `class="task td-task"`;
@@ -59,10 +76,7 @@ function renderTasks(taskList) {
       classContainer = `class="task c-task"`;
     }
 
-    console.log('counter:', counter);
-    console.log('$sectionContainer:', $sectionContainer);
-    console.log('classContainer:', classContainer);
-
+    // Render task to DOM in correct section with proper classes
     $sectionContainer.append(`
         <div ${classContainer}>
           <h3>${task.name}</h3>
@@ -118,7 +132,7 @@ function postTask(task) {
   })
     .then(function (response) {
       console.log('POST response:', response);
-      //render function
+      getTasks();
     })
     .catch(function (error) {
       console.log('*** ERROR in task POST', error);
