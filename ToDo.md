@@ -44,13 +44,33 @@
 
 ## Base Mode
 
-- [ ] create DB `weekend-to-do-app`
-  - [ ] database.sql file
-    - [ ] include all scripts
-- [ ] create a Task on the front end
-  - [ ] refresh to show all tasks that need to be completed (GET)
+- [x] create DB `weekend-to-do-app`
+  - [x] database.sql file
+    - [x] include all scripts
+- [x] static html setup
+  - [x] create a Task on the front end (form)
+  - [x] sections for "todo" "inprogress" "complete"
+- [ ] add task button listener
+- [ ] add task button handler
+- [ ] task.router.js
+  - [ ] GET all tasks
+  - [ ] PUT new task
+  - [ ] UPDATE task to in progress
+  - [ ] UPDATE task to complete
+  - [ ] DELETE task
+- [ ] AJAX
+  - [ ] GET all tasks
+  - [ ] POST new task all tasks
+  - [ ] UPDATE task to in progress
+  - [ ] UPDATE task to complete
+  - [ ] DELETE task
+- [ ] refresh to show all tasks that need to be completed (GET)
 - [ ] store newly created Task in db (POST)
 - [ ] Complete & Delete option per task
+  - [ ] complete button listener
+  - [ ] complete button handler
+  - [ ] delete button listener
+  - [ ] delete button handler
 - [ ] visually change task on front end when completed (UPDATE)
 - [ ] deleting a task should remove it from the db and front end (DELETE)
 - [ ] CSS
@@ -58,6 +78,7 @@
   - [ ] font family and siz
   - [ ] text color
   - [ ] background color of each task
+- [ ] README creation
 
 ## Stretch Goals
 
