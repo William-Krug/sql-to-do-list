@@ -53,11 +53,11 @@
 - [x] add task button listener
 - [x] add task button handler
 - [ ] task.router.js
-  - [ ] GET all tasks
-  - [ ] PUT new task
+  - [x] GET all tasks
+  - [x] PUT new task
   - [ ] UPDATE task to in progress
   - [ ] UPDATE task to complete
-  - [ ] DELETE task
+  - [x] DELETE task
 - [ ] AJAX
   - [ ] GET all tasks
   - [ ] POST new task all tasks

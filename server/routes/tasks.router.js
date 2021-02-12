@@ -69,12 +69,92 @@ router.post('/', (req, res) => {
     });
 });
 
+/**
+ * PUT /todoList/tasks/inProgress/2
+ *
+ * The requested task will have it's toDo value set to FALSE
+ * and it's inProgress value set to TRUE
+ */
 router.put('/tasks/inProgress/:id', (req, res) => {
-  pool.query().then().catch();
+  console.log('*** in PUT /todoList/tasks/inprogress/:id ***');
+
+  const inProgresssID = req.params.id;
+  console.log('inProgressID:', inProgresssID);
+
+  const inProgress = req.body.inProgress;
+  console.log('inProgress:', inProgress);
+  let sqlScript = '';
+
+  if (inProgress === 'TRUE') {
+    sqlScript = `
+      UPDATE "tasks"
+      SET "toDo" = FALSE
+      , "inProgress" = TRUE
+      WHERE "id" = $1;
+    `;
+  } else {
+    res.sendStatus(500);
+    return;
+  }
+
+  pool
+    .query(sqlScript, [inProgresssID])
+    .then((dbResponse) => {
+      console.log('dbResponse:', dbResponse);
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(
+        `*** ERROR making database PUT query ${sqlScript} ***`,
+        error
+      );
+      res.sendStatus(500);
+    });
 });
 
+/**
+ * PUT /todoList/tasks/completed/2
+ *
+ * The requested task will have it's toDo value set to FALSE
+ * it's inProgress value set to FALSE and
+ * it's completed value set to TRUE
+ */
 router.put('/tasks/completed/:id', (req, res) => {
-  pool.query().then().catch();
+  console.log('*** in PUT /todoList/tasks/inprogress/:id ***');
+
+  const completedID = req.params.id;
+  console.log('completedID:', completedID);
+
+  const completed = req.body.inProgress;
+  console.log('completed:', completed);
+  let sqlScript = '';
+
+  if (completed === 'TRUE') {
+    sqlScript = `
+      UPDATE "tasks"
+      SET "toDo" = FALSE
+      , "inProgress" = FALSE
+      , "completed" = TRUE
+      WHERE "id" = $1;
+    `;
+  } else {
+    res.sendStatus(500);
+    return;
+  }
+
+  pool
+    .query(sqlScript, [completedID])
+    .then((dbResponse) => {
+      console.log('dbResponse:', dbResponse);
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(
+        `*** ERROR making database PUT query ${sqlScript} ***`,
+        error
+      );
+      res.sendStatus(500);
+    });
 });
 
 /**
