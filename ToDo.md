@@ -40,7 +40,7 @@
   - [x] `pool.on("error", (error) => {console.log('ERROR: Connecting to postgres', error);});`
   - [x] `module.exports = pool;`
 - [ ] `const pool = require('filepath to pool.js')` where needed
-- [ ] Create `routes` directory inside of the `server` directory
+- [x] Create `routes` directory inside of the `server` directory
 
 ## Base Mode
 
