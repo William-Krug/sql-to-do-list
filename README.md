@@ -1,15 +1,3 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-
-(View Raw will give you the markdown that you can copy to your repos!)
-
 ![MIT LICENSE](https://img.shields.io/github/license/William-Krug/sql-to-do-list.svg?style=flat-square)
 ![REPO SIZE](https://img.shields.io/github/repo-size/William-Krug/sql-to-do-list.svg?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/William-Krug/sql-to-do-list.svg?style=flat-square)
@@ -21,7 +9,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 _Duration: 1 Weekend_
 
-This project was an exercise in utilizing the full stack to create a To Do List. The front end was rendered with HTML, CSS, JavaScript, and jQuery for form input and task rendering. Node and Express were used to ping the server and request task display, creation, updates, and deletes. Postgress and Postico were used to set up the server and store the tasks until they were no longer needed.
+This project was an exercise in utilizing the full stack to create a To Do List. The front end was rendered with HTML, CSS, JavaScript, and jQuery for form input and task rendering. Node and Express were used to ping the server and request task display, creation, updates, and deletes. Postgres and Postico were used to set up the server and store the tasks until they were no longer needed.
 
 To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
 
@@ -78,11 +66,9 @@ How does someone use this application? Tell a user story here.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-_Note, include this only if you have a license file. GitHub will generate one for you if you want!_
-
 ## Acknowledgement
 
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
 
 ## Support
 
