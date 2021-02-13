@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
   const sqlScript = `
     SELECT * FROM "tasks"
-    ORDER BY "id" ASC;
+    ORDER BY "id";
     `;
   console.log('sqlScript:', sqlScript);
 
@@ -46,12 +46,12 @@ router.post('/', (req, res) => {
     INSERT INTO "tasks"
       ("name", "notes")
     VALUES
-      ($1, $2)
+      ($1, $2);
     `;
   console.log('sqlScript:', sqlScript);
   const queryArguments = [
-    req.body.name, // $1
-    req.body.notes, // $2
+    req.body.taskName, // $1
+    req.body.taskNote, // $2
   ];
   console.log('queryArguments:', queryArguments);
 
@@ -71,6 +71,11 @@ router.post('/', (req, res) => {
 
 /**
  * PUT /todoList/tasks/inProgress/2
+ *
+ * Request body looks like:
+ * {
+ *  inProgress: TRUE
+ * }
  *
  * The requested task will have it's toDo value set to FALSE
  * and it's inProgress value set to TRUE
@@ -115,17 +120,22 @@ router.put('/tasks/inProgress/:id', (req, res) => {
 /**
  * PUT /todoList/tasks/completed/2
  *
+ * Request body looks like:
+ * {
+ *  completed: TRUE
+ * }
+ *
  * The requested task will have it's toDo value set to FALSE
  * it's inProgress value set to FALSE and
  * it's completed value set to TRUE
  */
 router.put('/tasks/completed/:id', (req, res) => {
-  console.log('*** in PUT /todoList/tasks/inprogress/:id ***');
+  console.log('*** in PUT /todoList/tasks/completed/:id ***');
 
   const completedID = req.params.id;
   console.log('completedID:', completedID);
 
-  const completed = req.body.inProgress;
+  const completed = req.body.completed;
   console.log('completed:', completed);
   let sqlScript = '';
 
@@ -171,7 +181,7 @@ router.delete('/tasks/:id', (req, res) => {
   const sqlScript = `
     DELETE FROM "tasks"
     WHERE "id" = $1;`;
-  console.log('sqlCript:', sqlScript);
+  console.log('sqlScript:', sqlScript);
 
   pool
     .query(sqlScript, [deleteID])

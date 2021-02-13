@@ -1,12 +1,21 @@
+body {
+  margin: 0;
+}
+
 header {
-  /* background-color:; */
+  background-color: #ff88ff9e;
   margin: 0;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+header h1 {
+  font-size: 3em;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 main {
-  /* background-color:; */
+  background-color: #ffff887e;
   margin: 0;
 }
 
@@ -16,17 +25,56 @@ main {
   padding-left: 10%;
 }
 
+h2 {
+  font-size: 2em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+p {
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+}
+
 #taskStatus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
 }
 
 .status {
   display: inline-block;
   text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
 .task {
   display: inline-block;
+  width: 200px;
+  height: 250px;
   margin: 0.5rem;
   padding: 1rem;
+}
+
+.td-task {
+  background-color: #ececec;
+}
+
+.ip-task {
+  background-color: #9bedff;
+}
+
+.c-task {
+  background-color: #b7ffbf;
+}
+
+.hide {
+  visibility: hidden;
 }

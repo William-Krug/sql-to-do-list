@@ -52,32 +52,32 @@
   - [x] sections for "todo" "inprogress" "complete"
 - [x] add task button listener
 - [x] add task button handler
-- [ ] task.router.js
+- [x] task.router.js
   - [x] GET all tasks
   - [x] PUT new task
-  - [ ] UPDATE task to in progress
-  - [ ] UPDATE task to complete
+  - [x] UPDATE task to in progress
+  - [x] UPDATE task to complete
   - [x] DELETE task
-- [ ] AJAX
-  - [ ] GET all tasks
-  - [ ] POST new task all tasks
-  - [ ] UPDATE task to in progress
-  - [ ] UPDATE task to complete
-  - [ ] DELETE task
-- [ ] refresh to show all tasks that need to be completed (GET)
-- [ ] store newly created Task in db (POST)
-- [ ] Complete & Delete option per task
+- [x] AJAX
+  - [x] GET all tasks
+  - [x] POST new task all tasks
+  - [x] UPDATE task to in progress
+  - [x] UPDATE task to complete
+  - [x] DELETE task
+- [x] refresh to show all tasks that need to be completed (GET)
+- [x] store newly created Task in db (POST)
+- [x] Complete & Delete option per task
   - [x] complete button listener
-  - [ ] complete button handler
+  - [x] complete button handler
   - [x] delete button listener
-  - [ ] delete button handler
-- [ ] visually change task on front end when completed (UPDATE)
-- [ ] deleting a task should remove it from the db and front end (DELETE)
+  - [x] delete button handler
+- [x] visually change task on front end when completed (UPDATE)
+- [x] deleting a task should remove it from the db and front end (DELETE)
 - [ ] CSS
-  - [ ] give background color
-  - [ ] font family and siz
+  - [x] give background color
+  - [x] font family and siz
   - [ ] text color
-  - [ ] background color of each task
+  - [x] background color of each task
 - [ ] README creation
 
 ## Stretch Goals
