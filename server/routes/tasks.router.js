@@ -46,12 +46,12 @@ router.post('/', (req, res) => {
     INSERT INTO "tasks"
       ("name", "notes")
     VALUES
-      ($1, $2)
+      ($1, $2);
     `;
   console.log('sqlScript:', sqlScript);
   const queryArguments = [
-    req.body.name, // $1
-    req.body.notes, // $2
+    req.body.taskName, // $1
+    req.body.taskNote, // $2
   ];
   console.log('queryArguments:', queryArguments);
 
@@ -171,7 +171,7 @@ router.delete('/tasks/:id', (req, res) => {
   const sqlScript = `
     DELETE FROM "tasks"
     WHERE "id" = $1;`;
-  console.log('sqlCript:', sqlScript);
+  console.log('sqlScript:', sqlScript);
 
   pool
     .query(sqlScript, [deleteID])

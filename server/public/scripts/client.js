@@ -18,7 +18,7 @@ function onReady() {
 }
 
 /**
- * GET call to /toDoList
+ * GET call to /todoList
  *
  * Function makes a GET AJAX call.
  * Successful promise renders all tasks to the DOM
@@ -90,7 +90,6 @@ function renderTasks(taskList) {
           <button value="deleteTask" class="deleteButton">Delete</button>
         </div>
       `);
-    counter++;
   }
 }
 
@@ -115,13 +114,22 @@ function createTask(event) {
     console.log('\tnewTask:', newTask);
   }
 
+  postTask(newTask);
   clearInputs();
 }
 
+/**
+ * POST call to /todoList
+ *
+ * Function makes a POST AJAX call.
+ * Successful promise calls GET call to render all tasks to DOM
+ *
+ * @param {*} task
+ */
 function postTask(task) {
   // Testing and debugging breadcrumbs
   if (verbose) {
-    console.log('*** in putTask() ***');
+    console.log('*** in postTask() ***');
     console.log('\ttask:', task);
   }
 
