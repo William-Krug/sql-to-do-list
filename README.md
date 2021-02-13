@@ -29,9 +29,9 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 ### Base Mode
 
-![Empty List]()
+![Empty List](https://github.com/William-Krug/sql-to-do-list/blob/master/images/base-mode-empty-board.png)
 
-![Populated List]()
+![Populated List](https://github.com/William-Krug/sql-to-do-list/blob/master/images/base-mode-populated-board.png)
 
 ### Prerequisites
 
