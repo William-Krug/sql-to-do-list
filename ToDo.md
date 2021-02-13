@@ -73,10 +73,9 @@
   - [x] delete button handler
 - [x] visually change task on front end when completed (UPDATE)
 - [x] deleting a task should remove it from the db and front end (DELETE)
-- [ ] CSS
+- [x] CSS
   - [x] give background color
-  - [x] font family and siz
-  - [ ] text color
+  - [x] font family and size
   - [x] background color of each task
 - [ ] README creation
 
