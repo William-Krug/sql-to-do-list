@@ -87,7 +87,7 @@ function renderTasks(taskList) {
           <button value="completeTask" class="completedButton">
             Completed
           </button>
-          <button value="deleteTask" class="deleteButton">Delete</button>
+          <button value="deleteTask" class="deleteButton" data-id="${task.id}">Delete</button>
         </div>
       `);
   }
@@ -170,9 +170,46 @@ function moveToCompleted() {
   }
 }
 
+/**
+ * Function targets the specific task ID associated with the
+ * delete button clicked.
+ *
+ * Calls deleteTask() and passes the ID
+ */
 function removeTask() {
   // Testing and debugging breadcrumbs
   if (verbose) {
     console.log('*** in removeTask() ***');
   }
+
+  deleteTask($(this).data('id'));
+}
+
+/**
+ * DELETE call to /todoList/tasks/2
+ *
+ * Function removes the task from the database.
+ * Successful promise calls GET call to render all tasks to DOM
+ *
+ * @param {*} deleteID
+ */
+function deleteTask(deleteID) {
+  // Testing and debugging breadcrumbs
+  if (verbose) {
+    console.log('*** in deleteTask() ***');
+    console.log('\tdeleteID:', deleteID);
+  }
+
+  $.ajax({
+    method: 'DELETE',
+    url: `/todoList/tasks/${deleteID}`,
+  })
+    .then(function (response) {
+      console.log('DELETE response:', response);
+      getTasks();
+    })
+    .catch(function (error) {
+      console.log('*** ERROR in task DELETE', error);
+      alert('*** ERROR deleting task.  Please try again later. ***');
+    });
 }

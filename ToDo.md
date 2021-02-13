@@ -60,7 +60,7 @@
   - [x] DELETE task
 - [ ] AJAX
   - [x] GET all tasks
-  - [ ] POST new task all tasks
+  - [x] POST new task all tasks
   - [ ] UPDATE task to in progress
   - [ ] UPDATE task to complete
   - [ ] DELETE task
