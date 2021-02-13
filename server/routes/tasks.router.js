@@ -72,6 +72,11 @@ router.post('/', (req, res) => {
 /**
  * PUT /todoList/tasks/inProgress/2
  *
+ * Request body looks like:
+ * {
+ *  inProgress: TRUE
+ * }
+ *
  * The requested task will have it's toDo value set to FALSE
  * and it's inProgress value set to TRUE
  */
@@ -120,7 +125,7 @@ router.put('/tasks/inProgress/:id', (req, res) => {
  * it's completed value set to TRUE
  */
 router.put('/tasks/completed/:id', (req, res) => {
-  console.log('*** in PUT /todoList/tasks/inprogress/:id ***');
+  console.log('*** in PUT /todoList/tasks/completed/:id ***');
 
   const completedID = req.params.id;
   console.log('completedID:', completedID);

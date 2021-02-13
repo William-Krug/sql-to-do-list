@@ -81,10 +81,10 @@ function renderTasks(taskList) {
         <div ${classContainer}>
           <h3>${task.name}</h3>
           <p>${task.notes}</p>
-          <button value="inProgressTask" class="inProgressButton">
+          <button value="inProgressTask" class="inProgressButton" data-id="${task.id}">
             In Progress
           </button>
-          <button value="completeTask" class="completedButton">
+          <button value="completeTask" class="completedButton" data-id="${task.id}">
             Completed
           </button>
           <button value="deleteTask" class="deleteButton" data-id="${task.id}">Delete</button>
@@ -156,11 +156,51 @@ function clearInputs() {
   $('#taskNotesInput').val('');
 }
 
+/**
+ * Function targets the specific task ID associated with the
+ * In Progress button clicked.
+ *
+ * Calls putInProgress() and passes the ID
+ */
 function moveToInProgress() {
   // Testing and debugging breadcrumbs
   if (verbose) {
     console.log('*** in moveToInProgress() ***');
   }
+
+  putInProgress($(this).data('id'));
+}
+
+/**
+ * PUT call to /todoList/tasks/inProgress/77
+ *
+ * Function makes a PUT AJAX call
+ * Successful promise calls GET call to render all tasks to DOM
+ *
+ * @param {*} taskID
+ */
+function putInProgress(taskID) {
+  // Testing and debugging breadcrumbs
+  if (verbose) {
+    console.log('*** in putInProgress() ***');
+    console.log('\ttaskID:', taskID);
+  }
+
+  $.ajax({
+    method: 'PUT',
+    url: `/todoList/tasks/inProgress/${taskID}`,
+    data: {
+      inProgress: 'TRUE',
+    },
+  })
+    .then(function (response) {
+      console.log('PUT response:', response);
+      getTasks();
+    })
+    .catch(function (error) {
+      console.log('*** ERROR in task PUT', error);
+      alert('*** ERROR moving task.  Please try again later. ***');
+    });
 }
 
 function moveToCompleted() {

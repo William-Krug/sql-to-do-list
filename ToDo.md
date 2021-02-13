@@ -63,16 +63,16 @@
   - [x] POST new task all tasks
   - [ ] UPDATE task to in progress
   - [ ] UPDATE task to complete
-  - [ ] DELETE task
-- [ ] refresh to show all tasks that need to be completed (GET)
-- [ ] store newly created Task in db (POST)
+  - [x] DELETE task
+- [x] refresh to show all tasks that need to be completed (GET)
+- [x] store newly created Task in db (POST)
 - [ ] Complete & Delete option per task
   - [x] complete button listener
   - [ ] complete button handler
   - [x] delete button listener
-  - [ ] delete button handler
+  - [x] delete button handler
 - [ ] visually change task on front end when completed (UPDATE)
-- [ ] deleting a task should remove it from the db and front end (DELETE)
+- [x] deleting a task should remove it from the db and front end (DELETE)
 - [ ] CSS
   - [ ] give background color
   - [ ] font family and siz
