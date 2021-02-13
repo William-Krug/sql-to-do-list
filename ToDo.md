@@ -58,26 +58,26 @@
   - [x] UPDATE task to in progress
   - [x] UPDATE task to complete
   - [x] DELETE task
-- [ ] AJAX
+- [x] AJAX
   - [x] GET all tasks
   - [x] POST new task all tasks
-  - [ ] UPDATE task to in progress
-  - [ ] UPDATE task to complete
+  - [x] UPDATE task to in progress
+  - [x] UPDATE task to complete
   - [x] DELETE task
 - [x] refresh to show all tasks that need to be completed (GET)
 - [x] store newly created Task in db (POST)
-- [ ] Complete & Delete option per task
+- [x] Complete & Delete option per task
   - [x] complete button listener
-  - [ ] complete button handler
+  - [x] complete button handler
   - [x] delete button listener
   - [x] delete button handler
-- [ ] visually change task on front end when completed (UPDATE)
+- [x] visually change task on front end when completed (UPDATE)
 - [x] deleting a task should remove it from the db and front end (DELETE)
 - [ ] CSS
-  - [ ] give background color
-  - [ ] font family and siz
+  - [x] give background color
+  - [x] font family and siz
   - [ ] text color
-  - [ ] background color of each task
+  - [x] background color of each task
 - [ ] README creation
 
 ## Stretch Goals

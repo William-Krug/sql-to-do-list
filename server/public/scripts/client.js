@@ -62,29 +62,37 @@ function renderTasks(taskList) {
   // Loop through provided taskList and append each task to the DOM
   for (let task of taskList) {
     let $sectionContainer = '';
-    let classContainer = '';
+    let taskClassContainer = '';
+    let ipButtonClassContainer = '';
+    let cButtonClassContainer = '';
 
     // Determine which section of the DOM current task belongs in
     if (task.toDo) {
       $sectionContainer = $('#toDoTasks');
-      classContainer = `class="task td-task"`;
+      taskClassContainer = `class="task td-task"`;
+      ipButtonClassContainer = `class="inProgressButton"`;
+      cButtonClassContainer = `class="completedButton"`;
     } else if (task.inProgress) {
       $sectionContainer = $('#inProgressTasks');
-      classContainer = `class="task ip-task"`;
+      taskClassContainer = `class="task ip-task"`;
+      ipButtonClassContainer = `class="inProgressButton hide"`;
+      cButtonClassContainer = `class="completedButton"`;
     } else if (task.completed) {
       $sectionContainer = $('#completedTasks');
-      classContainer = `class="task c-task"`;
+      taskClassContainer = `class="task c-task"`;
+      ipButtonClassContainer = `class="inProgressButton hide"`;
+      cButtonClassContainer = `class="completedButton hide"`;
     }
 
     // Render task to DOM in correct section with proper classes
     $sectionContainer.append(`
-        <div ${classContainer}>
+        <div ${taskClassContainer}>
           <h3>${task.name}</h3>
           <p>${task.notes}</p>
-          <button value="inProgressTask" class="inProgressButton" data-id="${task.id}">
+          <button value="inProgressTask" ${ipButtonClassContainer} data-id="${task.id}">
             In Progress
           </button>
-          <button value="completeTask" class="completedButton" data-id="${task.id}">
+          <button value="completeTask" ${cButtonClassContainer} data-id="${task.id}">
             Completed
           </button>
           <button value="deleteTask" class="deleteButton" data-id="${task.id}">Delete</button>
@@ -203,16 +211,56 @@ function putInProgress(taskID) {
     });
 }
 
+/**
+ * Function targets the specific task ID associated with the
+ * Completed button clicked.
+ *
+ * Calls putInProgress() and passes the ID
+ */
 function moveToCompleted() {
   // Testing and debugging breadcrumbs
   if (verbose) {
     console.log('*** in moveToCompleted() ***');
   }
+
+  putCompleted($(this).data('id'));
+}
+
+/**
+ * PUT call to /todoList/tasks/completed/171
+ *
+ * Function makes a PUT AJAX call
+ * Successful promise calls GET call to render all tasks to DOM
+ *
+ * @param {*} taskID
+ */
+function putCompleted(taskID) {
+  // Testing and debugging breadcrumbs
+  if (verbose) {
+    console.log('*** in putCompleted() ***');
+    console.log('\ttaskID:', taskID);
+  }
+
+  $.ajax({
+    method: 'PUT',
+    url: `/todoList/tasks/completed/${taskID}`,
+    data: {
+      completed: 'TRUE',
+    },
+  })
+    .then(function (response) {
+      console.log('PUT response:', response);
+      getTasks();
+    })
+    .catch(function (error) {
+      console.log('*** ERROR in task PUT', error);
+      alert('*** ERROR moving task.  Please try again later. ***');
+    });
 }
 
 /**
  * Function targets the specific task ID associated with the
- * delete button clicked.
+ * Delete button clicked.
  *
  * Calls deleteTask() and passes the ID
  */

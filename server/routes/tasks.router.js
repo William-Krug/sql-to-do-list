@@ -120,6 +120,11 @@ router.put('/tasks/inProgress/:id', (req, res) => {
 /**
  * PUT /todoList/tasks/completed/2
  *
+ * Request body looks like:
+ * {
+ *  completed: TRUE
+ * }
+ *
  * The requested task will have it's toDo value set to FALSE
  * it's inProgress value set to FALSE and
  * it's completed value set to TRUE
@@ -130,7 +135,7 @@ router.put('/tasks/completed/:id', (req, res) => {
   const completedID = req.params.id;
   console.log('completedID:', completedID);
 
-  const completed = req.body.inProgress;
+  const completed = req.body.completed;
   console.log('completed:', completed);
   let sqlScript = '';
 

@@ -11,6 +11,7 @@ header {
 
 header h1 {
   font-size: 3em;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 main {
@@ -22,6 +23,21 @@ main {
   display: inline-block;
   width: 30%;
   padding-left: 10%;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+p {
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
 }
 
 #taskStatus {
@@ -41,8 +57,8 @@ main {
 
 .task {
   display: inline-block;
-  width: 12rem;
-  height: 12rem;
+  width: 200px;
+  height: 250px;
   margin: 0.5rem;
   padding: 1rem;
 }
@@ -57,4 +73,8 @@ main {
 
 .c-task {
   background-color: #b7ffbf;
+}
+
+.hide {
+  visibility: hidden;
 }
