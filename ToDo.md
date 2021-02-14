@@ -77,7 +77,7 @@
   - [x] give background color
   - [x] font family and size
   - [x] background color of each task
-- [ ] README creation
+- [x] README creation
 
 ## Stretch Goals
 
