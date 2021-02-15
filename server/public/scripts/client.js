@@ -6,7 +6,7 @@ const verbose = true;
 
 function onReady() {
   console.log('*** I have jQuery ***');
-  getTasks();
+  // getTasks();
 
   // New Task Event Listener
   $('#addTaskForm').on('submit', createTask);

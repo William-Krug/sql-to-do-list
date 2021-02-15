@@ -1,5 +1,5 @@
 # Node modules
-nod_modules/
+node_modules/
 
 # OSX files
 .DS_Store

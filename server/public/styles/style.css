@@ -41,29 +41,35 @@ p {
 }
 
 #taskStatus {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
 }
 
 .status {
-  display: inline-block;
+  /* display: inline-block; */
   text-align: center;
   background-color: #ffffff;
   border: 1px solid #000000;
-  margin: 0.5rem;
+  /* margin: 0.5rem; */
   padding: 1rem;
 }
 
 .task {
-  display: inline-block;
-  width: 200px;
-  height: 250px;
+  /* display: inline-block; */
+  /* width: 200px; */
+  /* height: 250px; */
   margin: 0.5rem;
   padding: 1rem;
 }
 
-#toDoTasks {
+.date-completed {
+  text-align: right;
+}
+
+.date-stamp {
+  text-align: left;
+}
+
+/* #toDoTasks {
   display: inline-flex;
 }
 
@@ -73,7 +79,7 @@ p {
 
 #completedTasks {
   display: inline-flex;
-}
+} */
 
 .td-task {
   background-color: #ececec;

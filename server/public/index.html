@@ -49,55 +49,275 @@
         </div>
       </form>
 
-      <div id="taskStatus">
+      <!-- <div id="taskStatus">
         <section class="status">
           <h2>To Do</h2>
           <div id="toDoTasks">
-            <div class="task td-task">
-              <h3>Task 1</h3>
-              <p>Lorem Ipsum Frodo Do</p>
-              <button value="inProgressTask" class="inProgressButton">
-                In Progress
-              </button>
-              <button value="completeTask" class="completedButton">
-                Completed
-              </button>
-              <button value="deleteTask" class="deleteButton">Delete</button>
-            </div>
+            <div class="task td-task"></div>
           </div>
         </section>
         <section class="status">
           <h2>In Progress</h2>
-          <div id="inProgressTasks">
-            <!-- <div class="task ip-task">
-              <h3>Task 4</h3>
-              <p>Lorem Ipsum Frodo Do</p>
-              <button value="inProgressTask" class="inProgressButton">
-                In Progress
-              </button>
-              <button value="completeTask" class="completedButton">
-                Completed
-              </button>
-              <button value="deleteTask" class="deleteButton">Delete</button>
-            </div> -->
-          </div>
+          <div id="inProgressTasks"></div>
         </section>
         <section class="status">
           <h2>Completed</h2>
-          <div id="completedTasks">
-            <!-- <div class="task c-task">
-              <h3>Task 6</h3>
-              <p>Lorem Ipsum Frodo Do</p>
-              <button value="inProgressTask" class="inProgressButton">
-                In Progress
-              </button>
-              <button value="completeTask" class="completedButton">
-                Completed
-              </button>
-              <button value="deleteTask" class="deleteButton">Delete</button>
-            </div> -->
-          </div>
+          <div id="completedTasks"></div>
         </section>
+      </div> -->
+
+      <!-- Bootstrap layout -->
+      <div id="taskStatus" class="container-fluid">
+        <div class="row">
+          <section class="col status">
+            <h2>To Do</h2>
+            <div id="toDoTasks" class="container">
+              <div class="row">
+                <div class="container task td-task">
+                  <div class="row">
+                    <div class="col"></div>
+                    <div class="col date-completed">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col date-stamp">Date Stamp</div>
+                  </div>
+                  <div class="row">
+                    <h3>Task 1</h3>
+                  </div>
+                  <div class="row">
+                    <p>Loreum Ipsum Voodoo Wild Monkey</p>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col">
+                      <button>Completed</button>
+                    </div>
+                    <div class="col">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="task td-task">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 1</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 2</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 3</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </section>
+          <section class="col status">
+            <h2>In Progress</h2>
+            <div id="inProgressTasks">
+              <div class="task td-task">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 4</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 5</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 6</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="col status">
+            <h2>Completed</h2>
+            <div id="completedTasks">
+              <div class="task td-task">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 7</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 8</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                      <p><strong>Date Completed:</strong></p>
+                    </div>
+                    <div class="col-sm">Time Stamp</div>
+                  </div>
+                  <h3>Task 9</h3>
+                  <p>Loreum Ipsum Voodoo</p>
+                  <div class="row">
+                    <div class="col-sm">
+                      <button>In Progress</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Complete</button>
+                    </div>
+                    <div class="col-sm">
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   </body>
